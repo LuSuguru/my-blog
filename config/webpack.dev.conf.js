@@ -2,6 +2,7 @@ const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DefinePlugin = require('webpack/lib/DefinePlugin')
+
 const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin')
 
 Object.keys(baseWebpackConfig.entry).forEach(name => {
@@ -22,6 +23,7 @@ module.exports = merge(baseWebpackConfig, {
 
   plugins: [
     new HotModuleReplacementPlugin(),
+
 
     // 生成自动引用文件的html模板
     new HtmlWebpackPlugin({

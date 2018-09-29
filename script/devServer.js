@@ -31,6 +31,10 @@ app.use(require('connect-history-api-fallback')())
 app.use(devMiddleware)
 app.use(hotMiddleware)
 
+const staticPath = path.posix.join('/my-blog', 'static')
+console.log(staticPath)
+app.use(staticPath, express.static('./static'))
+
 app.use(bodyParser.json()) // 解析application/json
 app.use(bodyParser.urlencoded({ extended: false })) // 解析 application/x-www-form-urlencoded
 

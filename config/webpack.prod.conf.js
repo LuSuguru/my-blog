@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyESPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const autoprefixer = require('autoprefixer')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
   output: {
@@ -111,6 +112,15 @@ module.exports = merge(baseWebpackConfig, {
         NODE_ENV: JSON.stringify('production')
       }
     }),
+
+    // 拷贝static里的文件
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: path.resolve(__dirname, '../build/static'),
+        ignore: ['.*']
+      }
+    ]),
 
     // 生成自动引用文件的html模板
     new HtmlWebpackPlugin({

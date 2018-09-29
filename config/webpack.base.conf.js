@@ -31,12 +31,12 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        enforce: 'pre',
-        use: ['eslint-loader'],
-        include: path.resolve(__dirname, '../src')
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   enforce: 'pre',
+      //   use: ['eslint-loader'],
+      //   include: path.resolve(__dirname, '../src')
+      // },
       {
         oneOf: [
           {
