@@ -32,7 +32,6 @@ app.use(devMiddleware)
 app.use(hotMiddleware)
 
 const staticPath = path.posix.join('/my-blog', 'static')
-console.log(staticPath)
 app.use(staticPath, express.static('./static'))
 
 app.use(bodyParser.json()) // 解析application/json
