@@ -13,7 +13,7 @@ export default class extends PureComponent {
   }
 
   componentDidMount() {
-    const live2dPath = process.env.NODE_ENV === 'development' ? '/my-blog/static/live2d/assets/koharu.model.json' : '/static/live2d/assets/koharu.model.json'
+    const live2dPath = process.env.NODE_ENV === 'development' ? '/my-blog/static/live2d/assets/koharu.model.json' : '/my-blog/static/live2d/assets/koharu.model.json'
     window.loadlive2d("live2d", live2dPath)
   }
 
