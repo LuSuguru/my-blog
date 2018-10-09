@@ -22,7 +22,8 @@ module.exports = {
       components: path.resolve(__dirname, '../src/components'),
       pages: path.resolve(__dirname, '../src/pages'),
       ajax: path.resolve(__dirname, '../src/ajax'),
-      utils: path.resolve(__dirname, '../src/utils')
+      utils: path.resolve(__dirname, '../src/utils'),
+      styles: path.resolve(__dirname, '../src/styles')
     },
     extensions: ['.js', '.jsx']
   },

@@ -1,6 +1,11 @@
 import React from 'react'
+import { Button } from 'components'
+
+import 'styles/header.less'
 
 
 export default () => (
-  <div>测试</div>
+  <header className="header">
+    <Button>订阅</Button>
+  </header>
 )
