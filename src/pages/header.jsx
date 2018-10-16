@@ -6,6 +6,7 @@ import 'styles/header.less'
 
 export default () => (
   <header className="header">
-    <Button>订阅</Button>
+    <h1>LuSuguru's Studio</h1>
+    <h2>Things get worse before they get better.</h2>
   </header>
 )
